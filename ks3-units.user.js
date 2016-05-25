@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KS3 Stats
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  try to take over the world!
 // @author       Marcel Jackwerth
 // @match        https://www.kickstarter.com/projects/597507018/*
@@ -42,16 +42,13 @@
         STATS.timeTwo += unitsForName('Pebble Time 2');
     });
 
-    console.log(STATS);
-
     var container = document.createElement('div');
-    container.style.position = 'absolute';
-    container.style.left = 0;
-    container.style.right = 0;
     container.style.textAlign = 'center';
+    container.style.fontSize = '1.5em';
     container.style.backgroundColor = '#fff';
     container.style.padding = '10px';
-    document.getElementById('header').appendChild(container);
+    container.style.borderBottom = '1px solid #D9D9DE';
+    document.querySelector('#start-of-content').appendChild(container);
 
     var counts = [["Pebble Core", STATS.core], ["Pebble 2", STATS.two], ["Pebble Time 2", STATS.timeTwo]];
     counts = counts.sort(function(a, b) {
@@ -60,7 +57,7 @@
 
     var message = counts.map(function(s) {
         return "<b>" + s[0] + "</b> " + numberWithCommas(s[1]);
-    }).join("&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;");
+    }).join("&nbsp;&nbsp;&nbsp;<span style='opacity:0.33'>//</span>&nbsp;&nbsp;&nbsp;");
 
     container.innerHTML = "&#127881;&nbsp;&nbsp;&nbsp;" + message + "&nbsp;&nbsp;&nbsp;&#127881;";
 })();
