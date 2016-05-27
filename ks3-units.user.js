@@ -63,4 +63,8 @@
     }).join("&nbsp;&nbsp;&nbsp;<span style='opacity:0.33'>//</span>&nbsp;&nbsp;&nbsp;");
 
     container.innerHTML = "&#127881;&nbsp;&nbsp;&nbsp;" + message + "&nbsp;&nbsp;&nbsp;&#127881;";
+
+    setTimeout(function() {
+        window.location.reload();
+    }, 60000);
 })();
