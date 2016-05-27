@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KS3 Stats
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  try to take over the world!
 // @author       Marcel Jackwerth
 // @match        https://www.kickstarter.com/projects/597507018/pebble-2-time-2-and-core-an-entirely-new-3g-ultra*
