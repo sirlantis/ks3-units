@@ -7,6 +7,8 @@
 // @match        https://www.kickstarter.com/projects/597507018/pebble-2-time-2-and-core-an-entirely-new-3g-ultra*
 // @exclude      https://www.kickstarter.com/projects/597507018/pebble-2-time-2-and-core-an-entirely-new-3g-ultra/*
 // @grant        none
+// @run-at       document-body
+// @noframes
 // ==/UserScript==
 
 (function() {
