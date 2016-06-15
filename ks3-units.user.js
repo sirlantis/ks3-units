@@ -22,6 +22,7 @@
       core: 0,
       two: 0,
       timeTwo: 0,
+      timeRound: 0,
     };
 
     var rewards = document.querySelectorAll('.js-project-rewards > ol > li');
@@ -43,7 +44,7 @@
         STATS.core += unitsForName('Pebble Core');
         STATS.two += unitsForName('Pebble 2');
         STATS.timeTwo += unitsForName('Pebble Time 2');
-        STATS.timeRound += unitsForName('Pebble Time Round')
+        STATS.timeRound += unitsForName('Pebble Time Round');
     });
 
     var container = document.createElement('div');
