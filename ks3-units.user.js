@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KS3 Stats
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  try to take over the world!
 // @author       Marcel Jackwerth
 // @match        https://www.kickstarter.com/projects/597507018/pebble-2-time-2-and-core-an-entirely-new-3g-ultra*
@@ -22,6 +22,7 @@
       core: 0,
       two: 0,
       timeTwo: 0,
+      timeRound: 0,
     };
 
     var rewards = document.querySelectorAll('.js-project-rewards > ol > li');
@@ -43,6 +44,7 @@
         STATS.core += unitsForName('Pebble Core');
         STATS.two += unitsForName('Pebble 2');
         STATS.timeTwo += unitsForName('Pebble Time 2');
+        STATS.timeRound += unitsForName('Pebble Time Round');
     });
 
     var container = document.createElement('div');
@@ -53,7 +55,7 @@
     container.style.borderBottom = '1px solid #D9D9DE';
     document.querySelector('#start-of-content').appendChild(container);
 
-    var counts = [["Pebble Core", STATS.core], ["Pebble 2", STATS.two], ["Pebble Time 2", STATS.timeTwo]];
+    var counts = [["Pebble Core", STATS.core], ["Pebble 2", STATS.two], ["Pebble Time 2", STATS.timeTwo], ["Pebble Time Round", STATS.timeRound]];
     counts = counts.sort(function(a, b) {
         return a[1] - b[1];
     });
